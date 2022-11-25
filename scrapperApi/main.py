@@ -8,6 +8,11 @@ from flask import Flask, request, render_template, json
 app = Flask(__name__)
 
 
+@app.route('/ScrapData/<name>')
+def success(name):
+    return name
+
+
 @app.route('/ScrapData', methods=['GET'])
 def scrap():
     if request.method == 'GET':
@@ -31,6 +36,8 @@ def scrap():
             "text": text
         }
         return res
+
+
 
 
 if __name__ == '__main__':

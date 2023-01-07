@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace WebApplication1.services;
 
-public class CommentService:IComment
+public class CommentService:ICommentService
 {
     private modelContext _con;
 

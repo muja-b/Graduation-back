@@ -4,4 +4,5 @@ public interface IPostsService
 {
     Task<List<Post>> getPosts();
     Task<bool> addPosts(Post post);
+    Task<bool> likePost(int postId);
 }

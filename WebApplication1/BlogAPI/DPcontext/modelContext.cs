@@ -15,6 +15,6 @@ public class modelContext : DbContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-                optionsBuilder.UseSqlServer("server=.;database=TouchTypingUsers;trusted_connection=true;");
+                optionsBuilder.UseSqlServer("server=.;database=Blog;trusted_connection=true;");
         }
 }

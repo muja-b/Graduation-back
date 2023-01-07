@@ -13,7 +13,6 @@ builder.Services.AddDbContext<modelContext>();
 builder.Services.AddScoped<IPostsService,PostsService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddSwaggerGen();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,9 +23,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseMiddleware<Authentication>();
 app.UseAuthorization();
-
+app.UseCors();
 app.MapControllers();
 
 app.Run();

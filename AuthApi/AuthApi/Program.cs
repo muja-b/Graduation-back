@@ -1,6 +1,7 @@
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using AuthApi.DpContext;
+using AuthApi.Models;
 using AuthApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ModelContext>();
 builder.Services.AddScoped<IAuthRepo, AuthRepo>();
+builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

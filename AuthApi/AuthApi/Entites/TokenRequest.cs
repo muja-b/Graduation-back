@@ -1,4 +1,4 @@
-﻿namespace NewsPaper.Models
+﻿namespace AuthApi.Entites
 {
     public class TokenRequest
     {
